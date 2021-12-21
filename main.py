@@ -1,17 +1,7 @@
-from __future__ import division, print_function
-import sys
 import os
-import glob
-import re
 import numpy as np
 import tensorflow as tf
-from keras.applications.imagenet_utils import preprocess_input, decode_predictions
-from keras.models import load_model
-from keras.preprocessing import image
-from flask import Flask, redirect, url_for, request, render_template, flash
-from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
-import urllib.request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
