@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>App setas</title>
+</head>
+<body>
+    <h1>Clasificador de setas</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <input type="file" name="imagefile">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if prediction %}
+        <p>{{prediction|safe }}</p>
+    {% endif %}
+
+    {% if filename %}
+	<div>
+		<img src="{{filename}}">
+	</div>
+    {% endif %}
+
+</body>
+</html>
